@@ -1,17 +1,26 @@
 public class Aluno extends Pessoa {
-    
-    public Aluno(String semestre, String curso, String nome, int idade, String endereco) {
-        super(nome, idade, endereco);
-        public void setNome(String nome) {
-            this.nome = nome;
-        }
+    private String semestre;
+    private String curso;
 
-        public getNome(){
-                return this.nome
-        }
+    public void setSemestre(String semestre) {
+        this.semestre = semestre;
     }
-    public Aluno() {
+    public String getSemestre() {
+        return semestre;
+    }
+    public void setCurso(String curso) {
+        this.curso = curso;
+    }
+    public String getCurso() {
+        return curso;
+    }
+
+    public Aluno(String nome, int idade, String endereco, String semestre, String curso){
+        super(nome, idade, endereco);
+        setSemestre(semestre);
+        setCurso(curso);
+    }
+    public Aluno(){
 
     }
 }
-
